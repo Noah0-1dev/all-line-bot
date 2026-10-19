@@ -1,0 +1,13 @@
+# Môi trường ảo Python
+venv/
+__pycache__/
+*.pyc
+
+# Khóa bảo mật (API Key)
+.env
+
+# Thư mục ngrok cài đặt cục bộ
+ngrok-v3-stable-windows-amd64/
+
+# File cá nhân của VS Code
+.vscode/

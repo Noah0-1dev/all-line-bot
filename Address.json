@@ -1,0 +1,1612 @@
+[
+  {
+    "text": "358苗栗縣苑裡鎮慈和街259號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "264宜蘭縣員山鄉長嶺路181號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "312新竹縣橫山鄉中正路",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "424台中市和平區",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "710台南市永康區永安一街99號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "946屏東縣恆春鎮省北路275之1號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "982花蓮縣卓溪鄉古風村石平51之6號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "台東縣東河鄉24號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "411台中市太平區竹村路80巷10號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "南投縣南投市中學路5404號旁邊",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "540南投縣南投市工業南六路6號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "555南投縣魚池鄉金天巷45號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "432台中市大肚區大肚藍色公路",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "40671台中市北屯區崇德路三段835號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 5,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 8,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "202基隆市中正區壽山路",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "60090嘉義市西區玉山路501號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 5,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 8,
+        "length": 2
+      }
+    ]
+  },
+  {
+    "text": "600嘉義市東區啟明路264號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 2
+      }
+    ]
+  },
+  {
+    "text": "900屏東縣屏東市青島街106號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "900屏東縣屏東市復興路",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "950台東縣台東市傳廣路26號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "950台東縣台東市四維路一段464巷",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "950台東縣台東市博愛路186號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "97061花蓮縣花蓮市中美路113-6、113-7、113-8號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 5,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 8,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "970花蓮縣花蓮市達固湖彎大路23號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "360苗栗縣苗栗市為民街35號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "360苗栗縣苗栗市縣府路100號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "500彰化縣彰化市福山街348號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "號, No. 1三民路彰化市彰化縣500",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "town",
+        "offset": 11,
+        "length": 3
+      },
+      {
+        "category": "city",
+        "offset": 14,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "500彰化縣彰化市進德路1號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "945屏東縣牡丹鄉高士佛29號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "894金門縣濱海大道",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "892金門縣金寧鄉66號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "891金門縣金湖鎮尚義機場2號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "212連江縣東引鄉西引島",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "209連江縣南竿鄉三三六之八號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "連江縣北竿鄉",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "88593澎湖縣湖西鄉126-5號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 5,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 8,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "882澎湖縣望安鄉",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "883澎湖縣七美鄉平和村55號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "929屏東縣琉球鄉復興路161-52號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "952台東縣蘭嶼鄉",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "952, 蘭嶼鄉台東縣",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      },
+      {
+        "category": "city",
+        "offset": 8,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "951台東縣綠島鄉",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "台東縣綠島鄉",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "50351彰化縣花壇鄉虎山街1號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 5,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 8,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "515006彰化縣大村鄉學府路168號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 6,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 9,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "260宜蘭縣宜蘭市東津一路192號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "202基隆市中正區平一路360號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "251新北市淡水區北1-1鄉道",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "252新北市三芝區",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "224新北市瑞芳區基山街",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 3,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 6,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "南投縣仁愛鄉龍山巷546號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "宜蘭縣宜蘭市力新路197-163號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "新竹縣竹北市莊敬一路540巷302號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "新竹市東區公園路328號三樓之1號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 2
+      }
+    ]
+  },
+  {
+    "text": "臺灣臺北市大安區和平東路二段134號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "基隆市中正區信二路33號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "彰化縣彰化市中山路二段65號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "花蓮縣花蓮市中正路321號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "苗栗縣苗栗市中山路一段89號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "雲林縣斗六市中正路105號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "台南市東區崇明十一街",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 2
+      }
+    ]
+  },
+  {
+    "text": "彰化縣二林鎮原竹路120巷17號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "雲林縣斗六市正心路1號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "台南市安南區長和路二段66號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "嘉義縣朴子市開元路118號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "宜蘭縣冬山鄉冬山路二段172號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "苗栗縣南庄鄉向天湖25號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "新竹市東區東南街128號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 2
+      }
+    ]
+  },
+  {
+    "text": "基隆市仁愛區忠一路",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "宜蘭縣羅東鎮公正路666號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "台東縣長濱鄉忠勇村上三崙3-7號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "高雄市楠梓區藍田路288號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "桃園市八德區介壽路二段148號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "text": "新北市五股區五權路1號",
+    "language": "zh-tw",
+    "intent": "Address",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 0,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 3,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣南投縣仁愛鄉龍山巷546號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣宜蘭縣宜蘭市力新路197-163號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣新竹縣竹北市莊敬一路540巷302號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣新竹市東區公園路328號三樓之1號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 2
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣台北市大安區和平東路二段134號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣基隆市中正區信二路33號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣彰化縣彰化市中山路二段65號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣花蓮縣花蓮市中正路321號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣苗栗縣苗栗市中山路一段89號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣雲林縣斗六市中正路105號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣台南市東區崇明十一街",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 2
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣高雄市三民區建國一路123號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣台中市西屯區文心路二段456號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣嘉義縣太保市中山路369號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣新北市板橋區文化路一段789號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣桃園市中壢區永安北路234號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣台東縣台東市豐盛路五段567號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣屏東縣屏東市自由路三段890號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣南投縣埔里鎮中山路四段213號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "intent": "Address",
+    "language": "zh-tw",
+    "text": "台灣金門縣金城鎮民生路六段789號",
+    "entities": [
+      {
+        "category": "city",
+        "offset": 2,
+        "length": 3
+      },
+      {
+        "category": "town",
+        "offset": 5,
+        "length": 3
+      }
+    ]
+  }
+]
