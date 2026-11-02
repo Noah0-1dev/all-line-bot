@@ -7,6 +7,17 @@
       name="description"
       content="UniBridge：文藻外語大學國際學生專屬的多語言 LINE AI 小幫手 / Multilingual LINE AI helper for Wenzao international students"
     />
+    <meta name="theme-color" content="#06c755" />
+    <meta property="og:title" content="UniBridge｜Wenzao AI Helper" />
+    <meta
+      property="og:description"
+      content="Multilingual LINE AI helper for Wenzao international students"
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%89%3C/text%3E%3C/svg%3E"
+    />
     <title>UniBridge｜文藻國際學生 AI 小幫手</title>
     <style>
       :root {
@@ -21,6 +32,7 @@
         --shadow: 0 10px 30px rgba(10, 40, 25, 0.08);
         --ink: #fff;
       }
+
       @media (prefers-color-scheme: dark) {
         :root:not([data-theme="light"]) {
           --bg: #0c1410;
@@ -32,6 +44,7 @@
           --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
       }
+
       :root[data-theme="dark"] {
         --bg: #0c1410;
         --card: #15201a;
@@ -41,9 +54,8 @@
         --border: #26372d;
         --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
       }
-      * {
-        box-sizing: border-box;
-      }
+
+      * { box-sizing: border-box; }
       html {
         scroll-behavior: smooth;
         scroll-padding-top: 72px;
@@ -52,20 +64,11 @@
         margin: 0;
         background: var(--bg);
         color: var(--text);
-        font-family:
-          system-ui,
-          -apple-system,
-          "Noto Sans TC",
-          "Noto Sans Thai",
-          "Noto Sans Arabic",
-          "PingFang TC",
-          "Microsoft JhengHei",
-          sans-serif;
+        font-family: system-ui, -apple-system, "Noto Sans TC", "Noto Sans Thai",
+          "Noto Sans Arabic", "PingFang TC", "Microsoft JhengHei", sans-serif;
         line-height: 1.7;
       }
-      a {
-        color: inherit;
-      }
+      a { color: inherit; }
       :focus-visible {
         outline: 3px solid var(--line);
         outline-offset: 2px;
@@ -75,14 +78,24 @@
         margin: 0 auto;
         padding: 0 18px;
       }
+
       header {
         position: sticky;
         top: 0;
         z-index: 10;
-        background: color-mix(in srgb, var(--bg) 88%, transparent);
-        backdrop-filter: blur(10px);
+        background: rgba(244, 248, 245, 0.88);
         border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(10px);
       }
+      :root[data-theme="dark"] header {
+        background: rgba(12, 20, 16, 0.9);
+      }
+      @supports (background: color-mix(in srgb, var(--bg) 88%, transparent)) {
+        header {
+          background: color-mix(in srgb, var(--bg) 88%, transparent);
+        }
+      }
+
       .bar {
         display: flex;
         align-items: center;
@@ -95,9 +108,7 @@
         text-decoration: none;
         margin-inline-end: auto;
       }
-      .brand b {
-        color: var(--line);
-      }
+      .brand b { color: var(--line); }
       nav {
         display: flex;
         gap: 6px;
@@ -126,13 +137,13 @@
         max-width: 150px;
       }
       @media (max-width: 760px) {
-        nav {
-          display: none;
-        }
+        nav { display: none; }
       }
 
       .hero {
         padding: 54px 0 28px;
+        background: radial-gradient(700px 300px at 88% -40px, var(--soft), transparent),
+          radial-gradient(520px 240px at 0 0, rgba(6, 199, 85, 0.08), transparent);
       }
       .hg {
         display: grid;
@@ -141,9 +152,7 @@
         align-items: center;
       }
       @media (max-width: 820px) {
-        .hg {
-          grid-template-columns: 1fr;
-        }
+        .hg { grid-template-columns: 1fr; }
       }
       h1 {
         font-size: clamp(30px, 5.6vw, 50px);
@@ -223,7 +232,6 @@
         padding: 5px;
       }
 
-      /* hero chat: the one memorable element */
       .chat {
         background: var(--card);
         border: 1px solid var(--border);
@@ -302,7 +310,6 @@
         }
       }
 
-      /* language strip */
       .langs {
         border-block: 1px solid var(--border);
         background: var(--card);
@@ -327,9 +334,7 @@
         font-size: 15px;
       }
       @keyframes slide {
-        to {
-          transform: translateX(-50%);
-        }
+        to { transform: translateX(-50%); }
       }
       .lnote {
         text-align: center;
@@ -383,7 +388,6 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 18px;
-        counter-reset: s;
       }
       .step {
         background: var(--card);
@@ -419,9 +423,7 @@
         align-items: start;
       }
       @media (max-width: 760px) {
-        .demo {
-          grid-template-columns: 1fr;
-        }
+        .demo { grid-template-columns: 1fr; }
       }
       .tabs {
         display: flex;
@@ -563,28 +565,23 @@
             <p class="sub" id="sub"></p>
             <div class="acts">
               <a class="cta" id="cta" target="_blank" rel="noopener"></a>
-              <button class="copy" id="copy"></button>
+              <button class="copy" id="copy" type="button"></button>
             </div>
             <ul class="badges" id="badges"></ul>
             <div class="qrbox">
-              <img
-                id="qr"
-                src="line-qr.png"
-                alt="LINE QR Code"
-                onerror="this.parentNode.style.display = 'none'"
-              />
+              <img id="qr" src="line-qr.png" alt="LINE QR Code" onerror="this.parentNode.style.display='none'" />
               <span id="scan"></span>
             </div>
           </div>
           <div class="chat" aria-hidden="true">
             <div class="chat-h">
               <span class="dot">U</span>
-              <div>UniBridge<small id="online"></small></div>
+              <div>
+                UniBridge
+                <small id="online"></small>
+              </div>
             </div>
-            <div
-              id="hchat"
-              style="display: flex; flex-direction: column; gap: 10px"
-            ></div>
+            <div id="hchat" style="display: flex; flex-direction: column; gap: 10px"></div>
           </div>
         </div>
       </div>
@@ -600,12 +597,14 @@
           <div class="feats" id="feats"></div>
         </div>
       </section>
+
       <section id="how">
         <div class="wrap rv">
           <h2 id="hh"></h2>
           <div class="steps" id="steps"></div>
         </div>
       </section>
+
       <section id="demo">
         <div class="wrap rv">
           <h2 id="hd"></h2>
@@ -615,23 +614,22 @@
           </div>
         </div>
       </section>
+
       <section id="faq">
         <div class="wrap rv" style="max-width: 760px">
           <h2 id="hq"></h2>
           <div id="faqs"></div>
         </div>
       </section>
+
       <section id="map">
         <div class="wrap rv map">
           <h2 id="hm"></h2>
           <p id="md"></p>
-          <a id="mapimg" target="_blank" rel="noopener"
-            ><img
-              id="mapthumb"
-              loading="lazy"
-              alt="Campus map"
-              onerror="this.style.display = 'none'" /></a
-          ><br />
+          <a id="mapimg" target="_blank" rel="noopener">
+            <img id="mapthumb" loading="lazy" alt="Campus map" onerror="this.style.display='none'" />
+          </a>
+          <br />
           <a class="btn2" id="mb" target="_blank" rel="noopener"></a>
         </div>
       </section>
@@ -641,683 +639,777 @@
       <div class="wrap">
         <p id="note"></p>
         <p>
-          <a
-            href="https://www.wzu.edu.tw/"
-            target="_blank"
-            rel="noopener"
-            id="school"
-          ></a>
+          <a href="https://www.wzu.edu.tw/" target="_blank" rel="noopener" id="school"></a>
           · © UniBridge
         </p>
       </div>
     </footer>
 
     <script>
-      // ★ LINE 官方帳號 ID（含 @）
-      const LINE_ID = "@301aqqse";
-      const ADD_URL = "https://line.me/R/ti/p/" + encodeURIComponent(LINE_ID);
-      const MAP_URL =
-        "https://c005.wzu.edu.tw/datas/upload/files/Pictures/%E6%96%87%E8%97%BB%E5%A4%96%E8%AA%9E%E5%A4%A7%E5%AD%B8%E6%A0%A1%E5%9C%92%E5%B9%B3%E9%9D%A2%E5%9C%961029.jpg";
-      const ICONS = ["🪪", "📝", "🎓", "🏦", "🏠", "📢"];
+      (function () {
+        "use strict";
 
-      // 聊天支援的語言（不限於此，AI 可回覆更多語言）
-      const CHAT_LANGS = [
-        "繁體中文",
-        "English",
-        "Tiếng Việt",
-        "Bahasa Indonesia",
-        "Bahasa Melayu",
-        "Filipino",
-        "ไทย",
-        "日本語",
-        "한국어",
-        "Español",
-        "Français",
-        "Deutsch",
-        "Русский",
-        "العربية",
-        "हिन्दी",
-        "မြန်မာ",
-        "ភាសាខ្មែរ",
-        "Português",
-        "Italiano",
-        "Türkçe",
-        "Монгол",
-        "नेपाली",
-        "বাংলা",
-        "اردو",
-      ];
-      // 首頁問候輪播：[語言, 使用者問句, 回覆]
-      const HELLO = [
-        [
-          "Tiếng Việt",
-          "Gia hạn ARC như thế nào?",
-          "Bạn cần hộ chiếu, ARC và giấy xác nhận đang học…",
-        ],
-        [
+        const LINE_ID = "@301aqqse";
+        const ADD_URL = "https://line.me/R/ti/p/" + encodeURIComponent(LINE_ID);
+        const MAP_URL = "https://c005.wzu.edu.tw/datas/upload/files/Pictures/%E6%96%87%E8%97%BB%E5%A4%96%E8%AA%9E%E5%A4%A7%E5%AD%B8%E6%A0%A1%E5%9C%92%E5%B9%B3%E9%9D%A2%E5%9C%961029.jpg";
+        const ICONS = ["🪪", "📝", "🎓", "🏦", "🏠", "📢"];
+        const CHAT_LANGS = [
+          "繁體中文",
           "English",
-          "How do I request leave?",
-          "Log in to the school system, fill in the form…",
-        ],
-        [
-          "日本語",
-          "奨学金のお知らせはありますか？",
-          "最新のお知らせと申請リンクをご案内します。",
-        ],
-        [
-          "ไทย",
-          "ต่อบัตร ARC ยังไง?",
-          "เตรียมพาสปอร์ต ARC และหนังสือรับรองการเป็นนักศึกษา…",
-        ],
-        [
+          "Tiếng Việt",
           "Bahasa Indonesia",
-          "Bagaimana cara buka rekening?",
-          "Siapkan paspor, ARC, dan kartu mahasiswa…",
-        ],
-        [
-          "Español",
-          "¿Dónde está la biblioteca?",
-          "Te muestro el mapa del campus.",
-        ],
-        [
+          "Bahasa Melayu",
+          "Filipino",
+          "ไทย",
+          "日本語",
           "한국어",
-          "수강신청은 언제예요?",
-          "수강신청 일정과 공식 링크를 알려드릴게요.",
-        ],
-        [
+          "Español",
+          "Français",
+          "Deutsch",
+          "Русский",
           "العربية",
-          "كيف أمدد الإقامة؟",
-          "ستحتاج إلى جواز السفر وبطاقة الإقامة…",
-        ],
-      ];
+          "हिन्दी",
+          "မြန်မာ",
+          "ភាសាខ្មែរ",
+          "Português",
+          "Italiano",
+          "Türkçe",
+          "Монгол",
+          "नेपाली",
+          "বাংলা",
+          "اردو"
+        ];
 
-      const T = {
-        zh: {
-          dir: "ltr",
-          lang: "zh-Hant",
-          nav: ["功能", "使用方式", "常見問題", "校園地圖"],
-          tag: "你的文藻生活，<em>一個 LINE</em> 全搞定",
-          sub: "UniBridge 是專為文藻外語大學國際學生打造的 AI 小幫手。居留證、請假、獎學金、選課與校園公告，用你最熟悉的語言隨時問，不限於特定幾種語言。",
-          cta: "加入 LINE 好友",
-          copy: "複製 LINE ID",
-          copied: "已複製 ✓",
-          scan: "或用手機掃描 QR Code",
-          online: "多語言 · 全天候線上",
-          badges: [
-            "多國語言，母語直接問",
-            "資料來自校規與校園公告",
-            "附官方連結可查證",
-          ],
-          lnote:
-            "以上僅列出部分語言，你也可以用其他語言提問，UniBridge 會盡力以相同語言回覆。",
-          hf: "可以問什麼",
-          ft: [
-            "居留證與工作證",
-            "請假與選課",
-            "獎學金與工讀",
-            "開戶與匯款",
-            "宿舍與生活",
-            "校園公告與地圖",
-          ],
-          fd: [
-            "ARC 延期、工作許可與所需文件，一次查清楚。",
-            "線上請假流程、選課時程與注意事項。",
-            "獎學金公告與校內工讀的申請方式。",
-            "在台灣開戶、接收匯款的步驟與文件。",
-            "宿舍、日常生活與融入台灣的實用資訊。",
-            "查看最新公告，也能直接取得校園平面圖。",
-          ],
-          hh: "三步驟開始使用",
-          st: [
-            ["加入好友", "掃描 QR Code 或點選按鈕，加入 UniBridge。"],
-            ["輸入問題", "直接用你的母語或慣用語言提問，支援多國語言。"],
-            ["取得步驟與連結", "機器人整理具體步驟，並附上學校官方連結。"],
-          ],
-          hd: "實際問問看（示意）",
-          demo: [
-            [
-              "ARC 要怎麼延期？",
-              "通常需要準備護照、居留證、在學證明與申請表，並在效期屆滿前辦理。詳細步驟與官方連結，UniBridge 會依最新資料整理給你。",
-            ],
-            [
-              "線上請假流程是什麼？",
-              "一般會需要登入學校系統填寫申請、附上證明文件，再等待簽核。UniBridge 會列出每個步驟與對應網頁。",
-            ],
-            [
-              "最近有什麼獎學金公告？",
-              "UniBridge 會讀取最新校園公告，整理標題、日期與申請連結給你。",
-            ],
-          ],
-          hq: "常見問題",
-          q: [
-            [
-              "我一定要用中文提問嗎？",
-              "不用。你可以用中文、英文、越南語、印尼語、泰語、日語、韓語、西班牙語、阿拉伯語等多國語言提問，UniBridge 會用同樣的語言回答。",
-            ],
-            [
-              "回答可以完全相信嗎？",
-              "回答由 AI 根據校規與公告生成，僅供參考，正式規定請以學校官網最新公告為準。",
-            ],
-            [
-              "怎麼看校園地圖？",
-              "在聊天室輸入「地圖」或「map」，就能取得校園平面圖。",
-            ],
-            [
-              "找不到答案怎麼辦？",
-              "請換個關鍵字再問一次，或直接洽詢學校相關單位。",
-            ],
-          ],
-          hm: "校園平面圖",
-          md: "點擊圖片即可放大查看完整地圖。",
-          mb: "開啟完整地圖",
-          note: "本服務由 AI 生成，僅供參考，正式規定請以學校官網最新公告為準。",
-          school: "文藻官網",
-        },
-        en: {
-          dir: "ltr",
-          lang: "en",
-          nav: ["Features", "How it works", "FAQ", "Campus map"],
-          tag: "Your Wenzao life, <em>all in one LINE chat</em>",
-          sub: "UniBridge is an AI helper for international students at Wenzao Ursuline University. Ask about ARC, leave, scholarships, courses and campus news in the language you're most comfortable with — not just a fixed few.",
-          cta: "Add on LINE",
-          copy: "Copy LINE ID",
-          copied: "Copied ✓",
-          scan: "Or scan the QR code with your phone",
-          online: "Multilingual · always on",
-          badges: [
-            "Many languages, ask in your own",
-            "Based on school rules and news",
-            "Official links included",
-          ],
-          lnote:
-            "These are just some of the languages. Ask in another one and UniBridge will do its best to reply in kind.",
-          hf: "What you can ask",
-          ft: [
-            "ARC and work permit",
-            "Leave and courses",
-            "Scholarships and part-time jobs",
-            "Bank account and remittance",
-            "Dorm and daily life",
-            "Campus news and map",
-          ],
-          fd: [
-            "ARC extension, work permits and required documents.",
-            "Online leave steps, registration schedule and tips.",
-            "Scholarship notices and on-campus job applications.",
-            "Steps and documents to open an account and receive money.",
-            "Dorms, daily life and settling into Taiwan.",
-            "Latest announcements and the campus map.",
-          ],
-          hh: "Get started in 3 steps",
-          st: [
-            ["Add the bot", "Scan the QR code or tap the button."],
-            [
-              "Ask a question",
-              "Type in your own language — many languages are supported.",
-            ],
-            [
-              "Get steps and links",
-              "The bot lists clear steps with official school links.",
-            ],
-          ],
-          hd: "Try it (illustration)",
-          demo: [
-            [
-              "How do I extend my ARC?",
-              "You usually need your passport, ARC, proof of enrollment and an application form, submitted before the expiry date. UniBridge summarizes the latest steps and official links.",
-            ],
-            [
-              "How do I request leave online?",
-              "Typically: log in to the school system, fill in the request, attach documents and wait for approval. UniBridge lists each step with the right page.",
-            ],
-            [
-              "Any new scholarship news?",
-              "UniBridge reads the latest campus announcements and gives you titles, dates and application links.",
-            ],
-          ],
-          hq: "FAQ",
-          q: [
-            [
-              "Must I ask in Chinese?",
-              "No. Ask in Chinese, English, Vietnamese, Indonesian, Thai, Japanese, Korean, Spanish, Arabic and many more — UniBridge replies in the same language.",
-            ],
-            [
-              "Can I fully trust the answers?",
-              "Answers are AI-generated for reference only. Please check the official school website for current rules.",
-            ],
-            [
-              "How do I see the campus map?",
-              "Type “map” in the chat to receive the campus map.",
-            ],
-            [
-              "What if there is no answer?",
-              "Try different keywords, or contact the relevant school office.",
-            ],
-          ],
-          hm: "Campus map",
-          md: "Tap the image to view the full map.",
-          mb: "Open full map",
-          note: "Answers are generated by AI for reference only. Check the official school website for the latest rules.",
-          school: "Wenzao website",
-        },
-        vi: {
-          dir: "ltr",
-          lang: "vi",
-          nav: ["Tính năng", "Cách dùng", "Hỏi đáp", "Bản đồ"],
-          tag: "Cuộc sống ở Wenzao, <em>gói gọn trong một LINE</em>",
-          sub: "UniBridge là trợ lý AI cho sinh viên quốc tế trường Wenzao. Hỏi về ARC, nghỉ học, học bổng, đăng ký môn và thông báo trường bằng ngôn ngữ quen thuộc của bạn — không giới hạn vài ngôn ngữ cố định.",
-          cta: "Thêm bạn trên LINE",
-          copy: "Sao chép LINE ID",
-          copied: "Đã chép ✓",
-          scan: "Hoặc quét mã QR bằng điện thoại",
-          online: "Đa ngôn ngữ · luôn online",
-          badges: [
-            "Nhiều ngôn ngữ, hỏi bằng tiếng mẹ đẻ",
-            "Dựa trên quy chế và thông báo trường",
-            "Kèm link chính thức",
-          ],
-          lnote:
-            "Đây chỉ là một số ngôn ngữ. Bạn có thể hỏi bằng ngôn ngữ khác, UniBridge sẽ cố gắng trả lời bằng đúng ngôn ngữ đó.",
-          hf: "Bạn có thể hỏi gì",
-          ft: [
-            "Thẻ cư trú và giấy phép làm việc",
-            "Xin nghỉ học và đăng ký môn",
-            "Học bổng và làm thêm",
-            "Mở tài khoản và nhận tiền",
-            "Ký túc xá và đời sống",
-            "Thông báo và bản đồ trường",
-          ],
-          fd: [
-            "Gia hạn ARC, giấy phép làm việc và giấy tờ cần có.",
-            "Quy trình xin nghỉ học, lịch đăng ký môn và lưu ý.",
-            "Thông báo học bổng và cách xin làm thêm trong trường.",
-            "Các bước và giấy tờ để mở tài khoản, nhận tiền.",
-            "Ký túc xá, sinh hoạt và hòa nhập cuộc sống Đài Loan.",
-            "Xem thông báo mới nhất và bản đồ khuôn viên.",
-          ],
-          hh: "Bắt đầu chỉ với 3 bước",
-          st: [
-            ["Thêm bạn", "Quét mã QR hoặc bấm nút để thêm UniBridge."],
-            [
-              "Đặt câu hỏi",
-              "Gõ bằng ngôn ngữ của bạn — hỗ trợ nhiều ngôn ngữ.",
-            ],
-            [
-              "Nhận các bước và link",
-              "Bot liệt kê các bước cụ thể kèm link chính thức của trường.",
-            ],
-          ],
-          hd: "Thử hỏi (minh họa)",
-          demo: [
-            [
-              "Gia hạn ARC như thế nào?",
-              "Thường cần hộ chiếu, ARC, giấy xác nhận đang học và đơn đăng ký, nộp trước ngày hết hạn. UniBridge sẽ tóm tắt các bước mới nhất kèm link chính thức.",
-            ],
-            [
-              "Quy trình xin nghỉ học online là gì?",
-              "Thông thường: đăng nhập hệ thống của trường, điền đơn, đính kèm giấy tờ rồi chờ duyệt. UniBridge liệt kê từng bước và trang tương ứng.",
-            ],
-            [
-              "Có thông báo học bổng mới không?",
-              "UniBridge đọc thông báo mới nhất của trường và đưa cho bạn tiêu đề, ngày và link đăng ký.",
-            ],
-          ],
-          hq: "Hỏi đáp",
-          q: [
-            [
-              "Tôi có phải hỏi bằng tiếng Trung không?",
-              "Không. Bạn có thể hỏi bằng tiếng Việt, Anh, Indonesia, Thái, Nhật, Hàn, Tây Ban Nha, Ả Rập và nhiều ngôn ngữ khác — UniBridge trả lời bằng đúng ngôn ngữ đó.",
-            ],
-            [
-              "Có thể tin hoàn toàn vào câu trả lời không?",
-              "Câu trả lời do AI tạo, chỉ để tham khảo. Quy định chính thức xin xem trên website của trường.",
-            ],
-            [
-              "Xem bản đồ trường thế nào?",
-              "Nhắn “bản đồ” hoặc “map” trong khung chat để nhận bản đồ.",
-            ],
-            [
-              "Không tìm thấy câu trả lời thì sao?",
-              "Hãy thử từ khóa khác, hoặc liên hệ trực tiếp đơn vị liên quan của trường.",
-            ],
-          ],
-          hm: "Bản đồ khuôn viên",
-          md: "Bấm vào ảnh để xem bản đồ đầy đủ.",
-          mb: "Mở bản đồ đầy đủ",
-          note: "Câu trả lời do AI tạo, chỉ để tham khảo. Quy định chính thức xin xem website của trường.",
-          school: "Website Wenzao",
-        },
-        // 以下語言只翻譯主要文字，其餘自動使用英文
-        id: {
-          lang: "id",
-          nav: ["Fitur", "Cara pakai", "FAQ", "Peta"],
-          tag: "Hidup di Wenzao, <em>cukup satu LINE</em>",
-          sub: "UniBridge adalah asisten AI untuk mahasiswa internasional Wenzao. Tanyakan ARC, izin, beasiswa, KRS, dan pengumuman kampus dalam bahasamu — banyak bahasa didukung.",
-          cta: "Tambah di LINE",
-          copy: "Salin LINE ID",
-          copied: "Tersalin ✓",
-          scan: "Atau pindai kode QR",
-          badges: [
-            "Banyak bahasa",
-            "Berdasarkan aturan & pengumuman kampus",
-            "Dengan tautan resmi",
-          ],
-          note: "Jawaban dibuat oleh AI hanya sebagai referensi. Periksa situs resmi kampus untuk aturan terbaru.",
-        },
-        ms: {
-          lang: "ms",
-          nav: ["Ciri", "Cara guna", "Soalan lazim", "Peta"],
-          tag: "Hidup di Wenzao, <em>semuanya dalam satu LINE</em>",
-          sub: "UniBridge ialah pembantu AI untuk pelajar antarabangsa Wenzao. Tanya tentang ARC, cuti, biasiswa, kursus dan pengumuman kampus dalam bahasa anda.",
-          cta: "Tambah di LINE",
-          copy: "Salin LINE ID",
-          copied: "Disalin ✓",
-          scan: "Atau imbas kod QR",
-          badges: [
-            "Pelbagai bahasa",
-            "Berdasarkan peraturan kampus",
-            "Pautan rasmi disertakan",
-          ],
-          note: "Jawapan dijana oleh AI untuk rujukan sahaja. Semak laman web rasmi universiti.",
-        },
-        fil: {
-          lang: "fil",
-          nav: ["Features", "Paano gamitin", "FAQ", "Mapa"],
-          tag: "Buhay sa Wenzao, <em>sa isang LINE lang</em>",
-          sub: "Ang UniBridge ay AI helper para sa mga international student ng Wenzao. Magtanong tungkol sa ARC, leave, scholarship at balita ng campus sa sarili mong wika.",
-          cta: "I-add sa LINE",
-          copy: "Kopyahin ang LINE ID",
-          copied: "Nakopya ✓",
-          scan: "O i-scan ang QR code",
-          badges: [
-            "Maraming wika",
-            "Batay sa patakaran ng paaralan",
-            "May opisyal na link",
-          ],
-          note: "Ang mga sagot ay gawa ng AI at para sa sanggunian lamang. Tingnan ang opisyal na website ng paaralan.",
-        },
-        th: {
-          lang: "th",
-          nav: ["ฟีเจอร์", "วิธีใช้", "คำถามที่พบบ่อย", "แผนที่"],
-          tag: "ชีวิตที่เวินเจา <em>จบในไลน์เดียว</em>",
-          sub: "UniBridge คือผู้ช่วย AI สำหรับนักศึกษาต่างชาติของ Wenzao ถามเรื่อง ARC การลา ทุนการศึกษา การลงทะเบียน และประกาศของมหาวิทยาลัยได้ด้วยภาษาของคุณ",
-          cta: "เพิ่มเพื่อนใน LINE",
-          copy: "คัดลอก LINE ID",
-          copied: "คัดลอกแล้ว ✓",
-          scan: "หรือสแกน QR code",
-          badges: [
-            "รองรับหลายภาษา",
-            "อิงระเบียบและประกาศของมหาวิทยาลัย",
-            "แนบลิงก์ทางการ",
-          ],
-          note: "คำตอบสร้างโดย AI เพื่อใช้อ้างอิงเท่านั้น โปรดตรวจสอบเว็บไซต์ทางการของมหาวิทยาลัย",
-        },
-        ja: {
-          lang: "ja",
-          nav: ["機能", "使い方", "よくある質問", "マップ"],
-          tag: "文藻での生活は、<em>LINE ひとつ</em>で",
-          sub: "UniBridge は文藻外語大学の留学生向け AI アシスタント。在留カード、欠席、奨学金、履修、お知らせまで、あなたの言語で質問できます。対応言語は一部に限りません。",
-          cta: "LINE で友だち追加",
-          copy: "LINE ID をコピー",
-          copied: "コピーしました ✓",
-          scan: "またはスマホで QR コードを読み取り",
-          badges: ["多言語対応", "学則とお知らせに基づく", "公式リンク付き"],
-          ft: [
-            "在留カードと就労許可",
-            "欠席と履修",
-            "奨学金とアルバイト",
-            "口座開設と送金",
-            "寮と生活",
-            "お知らせとマップ",
-          ],
-          note: "回答は AI が生成した参考情報です。正式な規定は大学の公式サイトをご確認ください。",
-        },
-        ko: {
-          lang: "ko",
-          nav: ["기능", "사용법", "자주 묻는 질문", "캠퍼스 지도"],
-          tag: "원자오 생활, <em>LINE 하나로</em> 끝",
-          sub: "UniBridge는 원자오 외국어대학 유학생을 위한 AI 도우미입니다. 거류증, 결석, 장학금, 수강신청, 학교 공지를 편한 언어로 물어보세요.",
-          cta: "LINE 친구 추가",
-          copy: "LINE ID 복사",
-          copied: "복사됨 ✓",
-          scan: "또는 휴대폰으로 QR 코드 스캔",
-          badges: ["다국어 지원", "학칙과 공지 기반", "공식 링크 제공"],
-          ft: [
-            "거류증과 취업허가",
-            "결석과 수강신청",
-            "장학금과 아르바이트",
-            "계좌 개설과 송금",
-            "기숙사와 생활",
-            "학교 공지와 지도",
-          ],
-          note: "답변은 AI가 생성한 참고용 정보입니다. 정확한 규정은 학교 공식 웹사이트를 확인하세요.",
-        },
-        es: {
-          lang: "es",
-          nav: ["Funciones", "Cómo usar", "Preguntas", "Mapa"],
-          tag: "Tu vida en Wenzao, <em>todo en un chat de LINE</em>",
-          sub: "UniBridge es un asistente de IA para estudiantes internacionales de Wenzao. Pregunta sobre ARC, permisos, becas, cursos y avisos del campus en tu idioma.",
-          cta: "Añadir en LINE",
-          copy: "Copiar LINE ID",
-          copied: "Copiado ✓",
-          scan: "O escanea el código QR",
-          badges: [
-            "Muchos idiomas",
-            "Basado en normas y avisos",
-            "Con enlaces oficiales",
-          ],
-          note: "Las respuestas las genera una IA solo como referencia. Consulta el sitio oficial de la universidad.",
-        },
-        ar: {
-          dir: "rtl",
-          lang: "ar",
-          nav: ["المزايا", "كيفية الاستخدام", "الأسئلة الشائعة", "الخريطة"],
-          tag: "حياتك في ونزاو، <em>في دردشة LINE واحدة</em>",
-          sub: "UniBridge مساعد ذكاء اصطناعي لطلاب ونزاو الدوليين. اسأل عن بطاقة الإقامة والإجازات والمنح والمقررات وإعلانات الجامعة بلغتك.",
-          cta: "أضِف على LINE",
-          copy: "نسخ LINE ID",
-          copied: "تم النسخ ✓",
-          scan: "أو امسح رمز QR",
-          badges: ["لغات متعددة", "مبني على اللوائح والإعلانات", "روابط رسمية"],
-          note: "الإجابات من إنتاج الذكاء الاصطناعي للاستئناس فقط. راجع الموقع الرسمي للجامعة.",
-        },
-      };
+        const HELLO = [
+          ["Tiếng Việt", "Gia hạn ARC như thế nào?", "Bạn cần hộ chiếu, ARC và giấy xác nhận đang học…"],
+          ["English", "How do I request leave?", "Log in to the school system, fill in the form…"],
+          ["日本語", "奨学金のお知らせはありますか？", "最新のお知らせと申請リンクをご案内します。"],
+          ["ไทย", "ต่อบัตร ARC ยังไง?", "เตรียมพาสปอร์ต ARC และหนังสือรับรองการเป็นนักศึกษา…"],
+          ["Bahasa Indonesia", "Bagaimana cara buka rekening?", "Siapkan paspor, ARC, dan kartu mahasiswa…"],
+          ["Español", "¿Dónde está la biblioteca?", "Te muestro el mapa del campus."],
+          ["한국어", "수강신청은 언제예요?", "수강신청 일정과 공식 링크를 알려드릴게요."],
+          ["العربية", "كيف أمدد الإقامة؟", "ستحتاج إلى جواز السفر وبطاقة الإقامة…"]
+        ];
 
-      const $ = (id) => document.getElementById(id);
-      const el = (tag, cls, txt) => {
-        const e = document.createElement(tag);
-        if (cls) e.className = cls;
-        if (txt != null) e.textContent = txt;
-        return e;
-      };
-
-      let cur,
-        demoIdx = 0,
-        timer,
-        helloTimer,
-        hi = 0,
-        T0;
-      function showDemo(t, i) {
-        clearTimeout(timer);
-        demoIdx = i;
-        [...$("tabs").children].forEach((b, k) =>
-          b.classList.toggle("on", k === i),
-        );
-        const ph = $("phone");
-        ph.replaceChildren(el("div", "msg me", t.demo[i][0]));
-        timer = setTimeout(
-          () => ph.append(el("div", "msg bot", t.demo[i][1])),
-          600,
-        );
-      }
-      function hello() {
-        clearTimeout(helloTimer);
-        const h = HELLO[hi % HELLO.length],
-          box = $("hchat"),
-          m = el("div", "msg me");
-        box.replaceChildren(m);
-        m.append(el("small", "", h[0]), document.createTextNode(h[1]));
-        helloTimer = setTimeout(() => {
-          box.append(el("div", "msg bot", h[2]));
-          helloTimer = setTimeout(() => {
-            hi++;
-            hello();
-          }, 2600);
-        }, 900);
-      }
-      function render(code) {
-        const t = Object.assign({}, T.en, T[code]);
-        cur = code;
-        const root = document.documentElement;
-        root.lang = t.lang;
-        root.dir = T[code].dir || "ltr";
-        document.title =
-          "UniBridge｜" +
-          (code === "zh" ? "文藻國際學生 AI 小幫手" : "Wenzao AI Helper");
-        $("tag").innerHTML = t.tag;
-        [
-          "sub",
-          "scan",
-          "hf",
-          "hh",
-          "hd",
-          "hq",
-          "hm",
-          "md",
-          "mb",
-          "note",
-          "school",
-          "lnote",
-          "online",
-        ].forEach((k) => ($(k).textContent = t[k]));
-        $("cta").textContent = t.cta;
-        $("cta").href = ADD_URL;
-        $("copy").textContent = t.copy;
-        $("copy").onclick = async () => {
-          try {
-            await navigator.clipboard.writeText(LINE_ID);
-          } catch (e) {}
-          const b = $("copy");
-          b.textContent = t.copied;
-          setTimeout(() => (b.textContent = t.copy), 1800);
+        const T = {
+          zh: {
+            dir: "ltr",
+            lang: "zh-Hant",
+            nav: ["功能", "使用方式", "常見問題", "校園地圖"],
+            tag: "你的文藻生活，<em>一個 LINE</em> 全搞定",
+            sub: "UniBridge 是專為文藻外語大學國際學生打造的 AI 小幫手。居留證、請假、獎學金、選課與校園公告，用你最熟悉的語言隨時問，不限於特定幾種語言。",
+            cta: "加入 LINE 好友",
+            copy: "複製 LINE ID",
+            copied: "已複製 ✓",
+            scan: "或用手機掃描 QR Code",
+            online: "多語言 · 全天候線上",
+            badges: ["多國語言，母語直接問", "資料來自校規與校園公告", "附官方連結可查證"],
+            lnote: "以上僅列出部分語言，你也可以用其他語言提問，UniBridge 會盡力以相同語言回覆。",
+            hf: "可以問什麼",
+            ft: ["居留證與工作證", "請假與選課", "獎學金與工讀", "開戶與匯款", "宿舍與生活", "校園公告與地圖"],
+            fd: [
+              "ARC 延期、工作許可與所需文件，一次查清楚。",
+              "線上請假流程、選課時程與注意事項。",
+              "獎學金公告與校內工讀的申請方式。",
+              "在台灣開戶、接收匯款的步驟與文件。",
+              "宿舍、日常生活與融入台灣的實用資訊。",
+              "查看最新公告，也能直接取得校園平面圖。"
+            ],
+            hh: "三步驟開始使用",
+            st: [
+              ["加入好友", "掃描 QR Code 或點選按鈕，加入 UniBridge。"],
+              ["輸入問題", "直接用你的母語或慣用語言提問，支援多國語言。"],
+              ["取得步驟與連結", "機器人整理具體步驟，並附上學校官方連結。"]
+            ],
+            hd: "實際問問看（示意）",
+            demo: [
+              ["ARC 要怎麼延期？", "通常需要準備護照、居留證、在學證明與申請表，並在效期屆滿前辦理。詳細步驟與官方連結，UniBridge 會依最新資料整理給你。"],
+              ["線上請假流程是什麼？", "一般會需要登入學校系統填寫申請、附上證明文件，再等待簽核。UniBridge 會列出每個步驟與對應網頁。"],
+              ["最近有什麼獎學金公告？", "UniBridge 會讀取最新校園公告，整理標題、日期與申請連結給你。"]
+            ],
+            hq: "常見問題",
+            q: [
+              ["我一定要用中文提問嗎？", "不用。你可以用中文、英文、越南語、印尼語、泰語、日語、韓語、西班牙語、阿拉伯語等多國語言提問，UniBridge 會用同樣的語言回答。"],
+              ["回答可以完全相信嗎？", "回答由 AI 根據校規與公告生成，僅供參考，正式規定請以學校官網最新公告為準。"],
+              ["怎麼看校園地圖？", "在聊天室輸入「地圖」或「map」，就能取得校園平面圖。"],
+              ["找不到答案怎麼辦？", "請換個關鍵字再問一次，或直接洽詢學校相關單位。"]
+            ],
+            hm: "校園平面圖",
+            md: "點擊圖片即可放大查看完整地圖。",
+            mb: "開啟完整地圖",
+            note: "本服務由 AI 生成，僅供參考，正式規定請以學校官網最新公告為準。",
+            school: "文藻官網"
+          },
+          en: {
+            dir: "ltr",
+            lang: "en",
+            nav: ["Features", "How it works", "FAQ", "Campus map"],
+            tag: "Your Wenzao life, <em>all in one LINE chat</em>",
+            sub: "UniBridge is an AI helper for international students at Wenzao Ursuline University. Ask about ARC, leave, scholarships, courses and campus news in the language you're most comfortable with — not just a fixed few.",
+            cta: "Add on LINE",
+            copy: "Copy LINE ID",
+            copied: "Copied ✓",
+            scan: "Or scan the QR code with your phone",
+            online: "Multilingual · always on",
+            badges: ["Many languages, ask in your own", "Based on school rules and news", "Official links included"],
+            lnote: "These are just some of the languages. Ask in another one and UniBridge will do its best to reply in kind.",
+            hf: "What you can ask",
+            ft: ["ARC and work permit", "Leave and courses", "Scholarships and part-time jobs", "Bank account and remittance", "Dorm and daily life", "Campus news and map"],
+            fd: [
+              "ARC extension, work permits and required documents.",
+              "Online leave steps, registration schedule and tips.",
+              "Scholarship notices and on-campus job applications.",
+              "Steps and documents to open an account and receive money.",
+              "Dorms, daily life and settling into Taiwan.",
+              "Latest announcements and the campus map."
+            ],
+            hh: "Get started in 3 steps",
+            st: [
+              ["Add the bot", "Scan the QR code or tap the button."],
+              ["Ask a question", "Type in your own language — many languages are supported."],
+              ["Get steps and links", "The bot lists clear steps with official school links."]
+            ],
+            hd: "Try it (illustration)",
+            demo: [
+              ["How do I extend my ARC?", "You usually need your passport, ARC, proof of enrollment and an application form, submitted before the expiry date. UniBridge summarizes the latest steps and official links."],
+              ["How do I request leave online?", "Typically: log in to the school system, fill in the request, attach documents and wait for approval. UniBridge lists each step with the right page."],
+              ["Any new scholarship news?", "UniBridge reads the latest campus announcements and gives you titles, dates and application links."]
+            ],
+            hq: "FAQ",
+            q: [
+              ["Must I ask in Chinese?", "No. Ask in Chinese, English, Vietnamese, Indonesian, Thai, Japanese, Korean, Spanish, Arabic and many more — UniBridge replies in the same language."],
+              ["Can I fully trust the answers?", "Answers are AI-generated for reference only. Please check the official school website for current rules."],
+              ["How do I see the campus map?", "Type “map” in the chat to receive the campus map."],
+              ["What if there is no answer?", "Try different keywords, or contact the relevant school office."]
+            ],
+            hm: "Campus map",
+            md: "Tap the image to view the full map.",
+            mb: "Open full map",
+            note: "Answers are generated by AI for reference only. Check the official school website for the latest rules.",
+            school: "Wenzao website"
+          },
+          vi: {
+            dir: "ltr",
+            lang: "vi",
+            nav: ["Tính năng", "Cách dùng", "Hỏi đáp", "Bản đồ"],
+            tag: "Cuộc sống ở Wenzao, <em>gói gọn trong một LINE</em>",
+            sub: "UniBridge là trợ lý AI cho sinh viên quốc tế trường Wenzao. Hỏi về ARC, nghỉ học, học bổng, đăng ký môn và thông báo trường bằng ngôn ngữ quen thuộc của bạn — không giới hạn vài ngôn ngữ cố định.",
+            cta: "Thêm bạn trên LINE",
+            copy: "Sao chép LINE ID",
+            copied: "Đã chép ✓",
+            scan: "Hoặc quét mã QR bằng điện thoại",
+            online: "Đa ngôn ngữ · luôn online",
+            badges: ["Nhiều ngôn ngữ, hỏi bằng tiếng mẹ đẻ", "Dựa trên quy chế và thông báo trường", "Kèm link chính thức"],
+            lnote: "Đây chỉ là một số ngôn ngữ. Bạn có thể hỏi bằng ngôn ngữ khác, UniBridge sẽ cố gắng trả lời bằng đúng ngôn ngữ đó.",
+            hf: "Bạn có thể hỏi gì",
+            ft: ["Thẻ cư trú và giấy phép làm việc", "Xin nghỉ học và đăng ký môn", "Học bổng và làm thêm", "Mở tài khoản và nhận tiền", "Ký túc xá và đời sống", "Thông báo và bản đồ trường"],
+            fd: [
+              "Gia hạn ARC, giấy phép làm việc và giấy tờ cần có.",
+              "Quy trình xin nghỉ học, lịch đăng ký môn và lưu ý.",
+              "Th��ng báo học bổng và cách xin làm thêm trong trường.",
+              "Các bước và giấy tờ để mở tài khoản, nhận tiền.",
+              "Ký túc xá, sinh hoạt và hòa nhập cuộc sống Đài Loan.",
+              "Xem thông báo mới nhất và bản đồ khuôn viên."
+            ],
+            hh: "Bắt đầu chỉ với 3 bước",
+            st: [
+              ["Thêm bạn", "Quét mã QR hoặc bấm nút để thêm UniBridge."],
+              ["Đặt câu hỏi", "Gõ bằng ngôn ngữ của bạn — hỗ trợ nhiều ngôn ngữ."],
+              ["Nhận các bước và link", "Bot liệt kê các bước cụ thể kèm link chính thức của trường."]
+            ],
+            hd: "Thử hỏi (minh họa)",
+            demo: [
+              ["Gia hạn ARC như thế nào?", "Thường cần hộ chiếu, ARC, giấy xác nhận đang học và đơn đăng ký, nộp trước ngày hết hạn. UniBridge sẽ tóm tắt các bước mới nhất kèm link chính thức."],
+              ["Quy trình xin nghỉ học online là gì?", "Thông thường: đăng nhập hệ thống của trường, điền đơn, đính kèm giấy tờ rồi chờ duyệt. UniBridge liệt kê từng bước và trang tương ứng."],
+              ["Có thông báo học bổng mới không?", "UniBridge đọc thông báo mới nhất của trường và đưa cho bạn tiêu đề, ngày và link đăng ký."]
+            ],
+            hq: "Hỏi đáp",
+            q: [
+              ["Tôi có phải hỏi bằng tiếng Trung không?", "Không. Bạn có thể hỏi bằng tiếng Việt, Anh, Indonesia, Thái, Nhật, Hàn, Tây Ban Nha, Ả Rập và nhiều ngôn ngữ khác — UniBridge trả lời bằng đúng ngôn ngữ đó."],
+              ["Có thể tin hoàn toàn vào câu trả lời không?", "Câu trả lời do AI tạo, chỉ để tham khảo. Quy định chính thức xin xem trên website của trường."],
+              ["Xem bản đồ trường thế nào?", "Nhắn “bản đồ” hoặc “map” trong khung chat để nhận bản đồ."],
+              ["Không tìm thấy câu trả lời thì sao?", "Hãy thử từ khóa khác, hoặc liên hệ trực tiếp đơn vị liên quan của trường."]
+            ],
+            hm: "Bản đồ khuôn viên",
+            md: "Bấm vào ảnh để xem bản đồ đầy đủ.",
+            mb: "Mở bản đồ đầy đủ",
+            note: "Câu trả lời do AI tạo, chỉ để tham khảo. Quy định chính thức xin xem website của trường.",
+            school: "Website Wenzao"
+          },
+          id: {
+            dir: "ltr",
+            lang: "id",
+            nav: ["Fitur", "Cara pakai", "FAQ", "Peta"],
+            tag: "Hidup di Wenzao, <em>cukup satu LINE</em>",
+            sub: "UniBridge adalah asisten AI untuk mahasiswa internasional Wenzao. Tanyakan ARC, izin, beasiswa, KRS, dan pengumuman kampus dalam bahasamu — banyak bahasa didukung.",
+            cta: "Tambah di LINE",
+            copy: "Salin LINE ID",
+            copied: "Tersalin ✓",
+            scan: "Atau pindai kode QR",
+            online: "Multilingual · selalu online",
+            badges: ["Banyak bahasa", "Berdasarkan aturan & pengumuman kampus", "Dengan tautan resmi"],
+            lnote: "Beberapa bahasa yang didukung. Tanyakan dalam bahasa lain dan UniBridge akan berusaha membalas dengan bahasa yang sama.",
+            hf: "Apa yang bisa ditanya",
+            ft: ["ARC dan izin kerja", "Cuti dan KRS", "Beasiswa dan pekerjaan part-time", "Rekening bank dan transfer", "Asrama dan kehidupan sehari-hari", "Pengumuman kampus & peta"],
+            fd: ["Perpanjangan ARC, izin kerja, dan dokumen yang dibutuhkan.", "Langkah cuti online, jadwal KRS, dan tips.", "Pengumuman beasiswa dan aplikasi kerja kampus.", "Langkah membuka rekening dan menerima transfer.", "Asrama, kehidupan sehari-hari, dan menyesuaikan diri di Taiwan.", "Pengumuman terbaru dan peta kampus."],
+            hh: "Mulai dalam 3 langkah",
+            st: [["Tambah bot", "Pindai QR atau klik tombol."], ["Tanya", "Ketik dalam bahasa Anda."], ["Dapatkan langkah dan link", "Bot memberi langkah jelas beserta link resmi."]],
+            hd: "Coba (ilustrasi)",
+            demo: [["Bagaimana memperpanjang ARC?", "Biasanya perlu paspor, ARC, bukti mahasiswa, dan formulir aplikasi."], ["Bagaimana cuti online?", "Login ke sistem akademik, isi formulir, lampirkan dokumen, lalu tunggu persetujuan."], ["Ada pengumuman beasiswa?", "UniBridge merangkum judul, tanggal, dan link pendaftaran."]],
+            hq: "FAQ",
+            q: [["Harus pakai bahasa Mandarin?", "Tidak. Anda bisa bertanya dalam berbagai bahasa, dan UniBridge akan coba menjawab dengan bahasa yang sama."], ["Apakah jawaban bisa dipercaya?", "Jawaban hanya referensi AI, cek situs resmi kampus untuk peraturan terbaru."], ["Bagaimana melihat peta kampus?", "Ketik “map” di chat."], ["Kalau tidak ada jawaban?", "Coba kata kunci lain atau hubungi unit sekolah yang terkait."]],
+            hm: "Peta kampus",
+            md: "Klik gambar untuk melihat peta penuh.",
+            mb: "Buka peta penuh",
+            note: "Jawaban dibuat oleh AI untuk referensi saja. Selalu cek website resmi kampus untuk aturan terbaru.",
+            school: "Website Wenzao"
+          },
+          ms: {
+            dir: "ltr",
+            lang: "ms",
+            nav: ["Ciri", "Cara guna", "Soalan lazim", "Peta"],
+            tag: "Hidup di Wenzao, <em>semuanya dalam satu LINE</em>",
+            sub: "UniBridge ialah pembantu AI untuk pelajar antarabangsa Wenzao. Tanya tentang ARC, cuti, biasiswa, kursus dan pengumuman kampus dalam bahasa anda.",
+            cta: "Tambah di LINE",
+            copy: "Salin LINE ID",
+            copied: "Disalin ✓",
+            scan: "Atau imbas kod QR",
+            online: "Pelbagai bahasa · sentiasa online",
+            badges: ["Pelbagai bahasa", "Berdasarkan peraturan kampus", "Pautan rasmi disertakan"],
+            lnote: "Ini hanya beberapa bahasa. Tanya dalam bahasa lain dan UniBridge akan cuba balas dengan bahasa yang sama.",
+            hf: "Apa yang boleh ditanya",
+            ft: ["ARC dan kebenaran kerja", "Cuti dan kursus", "Biasiswa dan kerja sambilan", "Akaun bank dan penghantaran wang", "Asrama dan kehidupan harian", "Pengumuman kampus & peta"],
+            fd: ["Perluasan ARC, kebenaran kerja, dokumen yang diperlukan.", "Langkah cuti online, jadual kursus, dan tips.", "Notis biasiswa dan permohonan kerja di kampus.", "Langkah membuka akaun dan menerima wang.", "Asrama, kehidupan harian, dan menyesuaikan diri di Taiwan.", "Pengumuman terbaru dan peta kampus."],
+            hh: "Mulakan dalam 3 langkah",
+            st: [["Tambah bot", "Imbas QR atau ketik butang."], ["Tanya soalan", "Tulis dalam bahasa anda."], ["Dapatkan langkah dan link", "Bot beri langkah jelas beserta link rasmi."]],
+            hd: "Cuba (ilustrasi)",
+            demo: [["Bagaimana untuk memperbaharui ARC?", "Biasanya anda perlu pasport, ARC, bukti pendaftaran, dan borang permohonan."], ["Bagaimana untuk cuti online?", "Log masuk ke sistem sekolah, isi permohonan, semak dokumen, dan tunggu kelulusan."], ["Ada notis biasiswa baru?", "UniBridge merumus judul, tarikh dan pautan permohonan."]],
+            hq: "Soalan Lazim",
+            q: [["Wajib tanya dalam Bahasa Cina?", "Tidak. Anda boleh tanya dalam bahasa lain, dan UniBridge akan cuba balas dalam bahasa yang sama."], ["Bolehkah saya percaya jawapan?", "Jawapan hanya untuk rujukan AI; semak laman web rasmi kampus untuk peraturan terbaru."], ["Bagaimana melihat peta kampus?", "Taip “map” di chat."], ["Apa kalau tidak ada jawapan?", "Cuba kata kunci lain atau hubungi pejabat yang berkaitan."]],
+            hm: "Peta kampus",
+            md: "Klik gambar untuk melihat peta penuh.",
+            mb: "Buka peta penuh",
+            note: "Jawapan dijana oleh AI untuk rujukan sahaja. Semak laman web rasmi universiti untuk peraturan terkini.",
+            school: "Laman Wenzao"
+          },
+          fil: {
+            dir: "ltr",
+            lang: "fil",
+            nav: ["Features", "Paano gamitin", "FAQ", "Mapa"],
+            tag: "Buhay sa Wenzao, <em>sa isang LINE lang</em>",
+            sub: "Ang UniBridge ay AI helper para sa mga international student ng Wenzao. Magtanong tungkol sa ARC, leave, scholarship at balita ng campus sa sarili mong wika.",
+            cta: "I-add sa LINE",
+            copy: "Kopyahin ang LINE ID",
+            copied: "Nakopya ✓",
+            scan: "O i-scan ang QR code",
+            online: "Maraming wika · laging online",
+            badges: ["Maraming wika", "Batay sa patakaran ng paaralan", "May opisyal na link"],
+            lnote: "Ito ay ilan lamang sa mga wika. Tanungin sa ibang wika at susubukan ng UniBridge na tumugon sa parehong wika.",
+            hf: "Ano ang pwedeng tanungin",
+            ft: ["ARC at permit sa trabaho", "Leave at enrollment", "Scholarship at part-time work", "Bank account at remittance", "Dorm at araw-araw na buhay", "Campus news at mapa"],
+            fd: ["Pagpapalawig ng ARC, permit sa trabaho, at mga kinakailangang dokumento.", "Mga hakbang sa online leave, enrollment schedule, at tips.", "Mga anunsyo ng scholarship at on-campus job application.", "Mga hakbang para magbukas ng account at makatanggap ng pera.", "Dorm, araw-araw na buhay, at pag-aangkop sa Taiwan.", "Pinakabagong anunsyo at mapa ng campus."],
+            hh: "Magsimula sa 3 hakbang",
+            st: [["Mag-add ng bot", "I-scan ang QR o pindutin ang button."], ["Magtanong", "Isulat sa iyong sariling wika."], ["Kumuha ng mga hakbang at links", "Bibigyan ka ng bot ng malinaw na steps at official links."]],
+            hd: "Subukan (illustration)",
+            demo: [["Paano magpalawig ng ARC?", "Kadalasan kailangan ang passport, ARC, proof of enrollment, at application form."], ["Paano ang online leave?", "Mag-login sa school system, punan ang form, i-attach ang mga dokumento, at maghintay ng approval."], ["May bagong scholarship announced?", "UniBridge ay bumubuod ng title, date, at application link."]],
+            hq: "FAQ",
+            q: [["Kailangan bang magsalita sa Chinese?", "Hindi. Maaari ka magtanong sa iba’t-ibang wika at susubukan ng UniBridge na sumagot sa parehong wika."], ["Mapagkakatiwalaan ba ang sagot?", "Ang sagot ay AI-generated at panuntunan lamang. Suriin ang opisyal na website ng paaralan."], ["Paano makita ang campus map?", "I-type ang “map” sa chat."], ["Kung walang sagot?", "Subukang maghanap ng ibang keywords o makipag-ugnayan sa related office."]],
+            hm: "Campus map",
+            md: "I-click ang larawan para makita ang buong mapa.",
+            mb: "Buksan ang buong mapa",
+            note: "Ang mga sagot ay gawa ng AI at para sa sanggunian lamang. Tingnan ang opisyal na website ng paaralan.",
+            school: "Wenzao website"
+          },
+          th: {
+            dir: "ltr",
+            lang: "th",
+            nav: ["ฟีเจอร์", "วิธีใช้", "คำถามที่พบบ่อย", "แผนที่"],
+            tag: "ชีวิตที่เวินเจา <em>จบในไลน์เดียว</em>",
+            sub: "UniBridge คือผู้ช่วย AI สำหรับนักศึกษาต่างชาติของ Wenzao ถามเรื่อง ARC การลา ทุนการศึกษา การลงทะเบียน และประกาศของมหาวิทยาลัยได้ด้วยภาษาของคุณ",
+            cta: "เพิ่มเพื่อนใน LINE",
+            copy: "คัดลอก LINE ID",
+            copied: "คัดลอกแล้ว ✓",
+            scan: "หรือสแกน QR code",
+            online: "รองรับหลายภาษา · พร้อมใช้งานตลอดเวลา",
+            badges: ["รองรับหลายภาษา", "อิงระเบียบและประกาศของมหาวิทยาลัย", "แนบลิงก์ทางการ"],
+            lnote: "นี่เป็นเพียงบางภาษา คุณสามารถถามด้วยภาษาอื่น UniBridge จะพยายามตอบในภาษานั้น",
+            hf: "สามารถถามอะไรได้",
+            ft: ["ARC และใบอนุญาตทำงาน", "การลาและการลงทะเบียน", "ทุนการศึกษาและงานชั่วคราว", "เปิดบัญชีธนาคารและการโอนเงิน", "หอพักและชีวิตประจำวัน", "ประกาศมหาวิทยาลัยและแผนที่"],
+            fd: ["การต่ออายุ ARC, ใบอนุญาตทำงาน, และเอกสารที่ต้องใช้.", "ขั้นตอนการลาทางออนไลน์, ตารางลงทะเบียน, และคำแนะนำ.", "ประกาศทุนการศึกษาและการสมัครงานภายในมหาวิทยาลัย.", "ขั้นตอนเปิดบัญชีและรับเงิน.", "หอพัก, ชีวิตประจำวัน, และการปรับตัวในไต้หวัน.", "ประกาศล่าสุดและแผนที่มหาวิทยาลัย."],
+            hh: "เริ่มต้นได้ใน 3 ขั้นตอน",
+            st: [["เพิ่มบอท", "สแกน QR หรือกดปุ่ม"], ["ถามคำถาม", "พิมพ์ภาษาใดก็ได้"], ["รับขั้นตอนและลิงก์", "บอทจะแสดงขั้นตอนลิงก์ทางการ"]],
+            hd: "ลองถาม (ตัวอย่าง)",
+            demo: [["ต่ออายุ ARC ยังไง?", "ปกติจะต้องมีหนังสือเดินทาง ARC หลักฐานการเป็นนักศึกษา และแบบฟอร์ม"], ["ขั้นตอนการลาทางออนไลน์คืออะไร?", "เข้าสู่ระบบ มายืนคำขอ จัดส่งเอกสาร แล้วรออนุมัติ"], ["มีประกาศทุนการศึกษาใหม่ไหม?", "UniBridge จะสรุปหัวข้อ วันที่ และลิงก์สมัคร"]],
+            hq: "คำถามที่พบบ่อย",
+            q: [["ต้องถามเป็นภาษาจีนหรือไม่?", "ไม่ คุณสามารถถามภาษาอื่นได้ และ UniBridge จะพยายามตอบเป็นภาษานั้น"], ["เชื่อคำตอบได้ไหม?", "คำตอบเป็นข้อมูลอ้างอิงจาก AI โปรดตรวจสอบเว็บไซต์ทางการของมหาวิทยาลัย"], ["ดูแผนที่มหาวิทยาลัยยังไง?", "พิมพ์ “map” ในแชต"], ["ถ้าไม่มีคำตอบ?", "ลองใช้คำค้นหาที่ต่างออกไป หรือติดต่อหน่วยงานที่เกี่ยวข้อง"]],
+            hm: "แผนที่มหาวิทยาลัย",
+            md: "คลิกภาพเพื่อดูแผนที่แบบเต็ม",
+            mb: "เปิดแผนที่แบบเต็ม",
+            note: "คำตอบสร้างโดย AI เพื่อใช้อ้างอิงเท่านั้น โปรดตรวจสอบเว็บไซต์ทางการของมหาวิทยาลัย",
+            school: "เว็บไซต์ Wenzao"
+          },
+          ja: {
+            dir: "ltr",
+            lang: "ja",
+            nav: ["機能", "使い方", "よくある質問", "マップ"],
+            tag: "文藻での生活は、<em>LINE ひとつ</em>で",
+            sub: "UniBridge は文藻外語大学の留学生向け AI アシスタント。在留カード、欠席、奨学金、履修、お知らせまで、あなたの言語で質問できます。",
+            cta: "LINE で友だち追加",
+            copy: "LINE ID をコピー",
+            copied: "コピーしました ✓",
+            scan: "またはスマホで QR コードを読み取り",
+            online: "多言語対応 · 24時間対応",
+            badges: ["多言語対応", "学則とお知らせに基づく", "公式リンク付き"],
+            lnote: "ここには一部の言語だけを示しています。他の言語でも質問でき、UniBridge は同じ言語で返答します。",
+            hf: "何が聞ける？",
+            ft: ["在留カードと就労許可", "欠席と履修", "奨学金とアルバイト", "口座開設と送金", "寮と生活", "お知らせとマップ"],
+            fd: ["在留カード更新、就労許可、必要書類。", "オンライン欠席の手順、履修スケジュールと注意点。", "奨学金のお知らせと大学内バイト申請。", "口座開設と送金に必要な手順。", "寮、日常生活、台湾での生活適応。", "最新のお知らせとキャンパスマップ。"],
+            hh: "3ステップで始める",
+            st: [["友だち追加", "QR コードを読み取るかボタンを押す"], ["質問する", "自分の言語で入力"], ["手順とリンクを取得", "公式リンク付きで詳細を整理" ]],
+            hd: "試してみる（例）",
+            demo: [["ARC はどうやって更新しますか？", "通常、パスポート、ARC、在学証明書、申請書が必要です。"], ["オンライン欠席の手順は？", "学校システムにログインし、申請書を記入し、書類を添付して承認待ちです。"], ["新しい奨学金のお知らせはありますか？", "UniBridge が最新公告を要約して、タイトル、日付、申請リンクをお知らせします。"]],
+            hq: "よくある質問",
+            q: [["中国語で質問する必要がありますか？", "いいえ。日本語、英語、ベトナム語、インドネシア語など多言語に対応しています。"], ["答えをそのまま信じてよいですか？", "AI が生成した参考情報です。正式な規定は大学公式サイトを確認してください。"], ["キャンパスマップはどう見る？", "チャットで「map」と入力してください。"], ["回答が見つからないときは？", "別のキーワードで試すか、関係部署に問い合わせてください。"]],
+            hm: "キャンパスマップ",
+            md: "画像をクリックして全体図を確認",
+            mb: "全地図を開く",
+            note: "回答は AI が生成した参考情報です。正式な規定は大学公式サイトをご確認ください。",
+            school: "Wenzao 公式サイト"
+          },
+          ko: {
+            dir: "ltr",
+            lang: "ko",
+            nav: ["기능", "사용법", "FAQ", "캠퍼스 지도"],
+            tag: "원자오 생활, <em>LINE 하나로</em> 끝",
+            sub: "UniBridge는 원자오 외국어대학 유학생을 위한 AI 도우미입니다. 거류증, 결석, 장학금, 수강신청, 학교 공지를 편한 언어로 물어보세요.",
+            cta: "LINE 친구 추가",
+            copy: "LINE ID 복사",
+            copied: "복사됨 ✓",
+            scan: "또는 휴대폰으로 QR 코드 스캔",
+            online: "다국어 · 항상 온라인",
+            badges: ["다국어 지원", "학칙과 공지 기반", "공식 링크 제공"],
+            lnote: "이곳에는 일부 언어만 보여집니다. 다른 언어로 질문해도 UniBridge는 같은 언어로 답변을 시도합니다.",
+            hf: "무엇을 물을 수 있나요",
+            ft: ["거류증과 취업허가", "결석과 수강신청", "장학금과 아르바이트", "계좌 개설과 송금", "기숙사와 생활", "학교 공지와 지도"],
+            fd: ["거류증 연장, 취업허가, 필요한 서류.", "온라인 결석 절차, 수강신청 일정, 팁.", "장학금 공지와 교내 아르바이트 신청.", "계좌 개설 및 송금 절차.", "기숙사, 일상 생활, 대만 적응.", "최신 공지와 캠퍼스 지도."],
+            hh: "3단계로 시작",
+            st: [["봇 추가", "QR 코드를 스캔하거나 버튼을 누르세요."], ["질문하기", "편한 언어로 입력하세요."], ["단계와 링크 확인", "공식 링크가 포함된 안내를 받습니다."]],
+            hd: "예시 보기",
+            demo: [["ARC 연장은 어떻게 하나요?", "보통 여권, ARC, 재학증명서, 신청서가 필요합니다."], ["온라인 결석 절차는 무엇인가요?", "학교 시스템에 로그인해 신청서를 작성하고 서류를 첨부한 뒤 승인을 기다리면 됩니다."], ["새 장학금 공지가 있나요?", "UniBridge가 최신 공지의 제목, 날짜, 신청 링크를 요약해 드립니다."]],
+            hq: "자주 묻는 질문",
+            q: [["중국어로만 질문해야 하나요?", "아니요. 여러 언어로 질문할 수 있고 UniBridge는 같은 언어로 답합니다."], ["정말 믿어도 되나요?", "AI가 생성한 참고용 정보입니다. 공식 규정은 학교 웹사이트를 확인하세요."], ["캠퍼스 지도를 어떻게 보나요?", "채팅에서 “map”이라고 입력하세요."], ["답변을 못 찾으면?", "다른 키워드로 다시 시도하거나 관련 부서에 문의하세요."]],
+            hm: "캠퍼스 지도",
+            md: "이미지를 클릭해 전체 지도를 확인하세요.",
+            mb: "전체 지도 열기",
+            note: "답변은 AI가 생성한 참고용 정보이며, 공식 규정은 학교 웹사이트를 확인하세요.",
+            school: "Wenzao 웹사이트"
+          },
+          es: {
+            dir: "ltr",
+            lang: "es",
+            nav: ["Funciones", "Cómo usar", "FAQ", "Mapa"],
+            tag: "Tu vida en Wenzao, <em>todo en un chat de LINE</em>",
+            sub: "UniBridge es un asistente de IA para estudiantes internacionales de Wenzao. Pregunta sobre ARC, permisos, becas, cursos y avisos del campus en tu idioma.",
+            cta: "Añadir en LINE",
+            copy: "Copiar LINE ID",
+            copied: "Copiado ✓",
+            scan: "O escanea el código QR",
+            online: "Multilingüe · siempre activo",
+            badges: ["Muchos idiomas", "Basado en normas y avisos", "Con enlaces oficiales"],
+            lnote: "Estos son solo algunos idiomas. Pregunta en otro idioma y UniBridge intentará responder en ese mismo idioma.",
+            hf: "Qué puedes preguntar",
+            ft: ["ARC y permiso de trabajo", "Permisos y cursos", "Becas y trabajos a tiempo parcial", "Cuenta bancaria y remesas", "Dormitorios y vida diaria", "Avisos del campus y mapa"],
+            fd: ["Extensión de ARC, permisos de trabajo y documentos necesarios.", "Pasos para pedir permiso, horario de cursos y consejos.", "Avisos de becas y solicitudes de trabajo dentro del campus.", "Pasos y documentos para abrir una cuenta y recibir dinero.", "Dormitorios, vida diaria y adaptación a Taiwán.", "Últimos avisos y mapa del campus."],
+            hh: "Empieza en 3 pasos",
+            st: [["Agrega el bot", "Escanea el QR o pulsa el botón."], ["Haz una pregunta", "Escribe en tu idioma."], ["Obtén pasos y enlaces", "El bot te dará instrucciones y links oficiales."]],
+            hd: "Pruébalo (ilustración)",
+            demo: [["¿Cómo extiendo mi ARC?", "Normalmente necesitas pasaporte, ARC, prueba de matrícula y formulario."], ["¿Cómo pido permiso en línea?", "Inicia sesión, llena el formulario, adjunta documentos y espera aprobación."], ["¿Hay noticias de becas nuevas?", "UniBridge resume título, fecha y enlace de solicitud."]],
+            hq: "Preguntas frecuentes",
+            q: [["¿Necesito preguntar en chino?", "No. Puedes preguntar en varios idiomas y UniBridge intentará responder en el mismo idioma."], ["¿Puedo confiar totalmente en las respuestas?", "Las respuestas son solo referencias de IA; consulta el sitio oficial."], ["¿Cómo veo el mapa del campus?", "Escribe “map” en el chat."], ["¿Qué hago si no hay respuesta?", "Prueba otras palabras clave o contacta el departamento relacionado."]],
+            hm: "Mapa del campus",
+            md: "Haz clic en la imagen para ver el mapa completo.",
+            mb: "Abrir mapa completo",
+            note: "Las respuestas son generadas por IA solo como referencia. Consulta el sitio oficial de la universidad para reglas actualizadas.",
+            school: "Sitio web de Wenzao"
+          },
+          ar: {
+            dir: "rtl",
+            lang: "ar",
+            nav: ["المزايا", "كيفية الاستخدام", "الأسئلة الشائعة", "الخريطة"],
+            tag: "حياتك في ونزاو، <em>في دردشة LINE واحدة</em>",
+            sub: "UniBridge مساعد ذكاء اصطناعي لطلاب ونزاو الدوليين. اسأل عن بطاقة الإقامة والإجازات والمنح والمقررات وإعلانات الجامعة بلغتك.",
+            cta: "أضِف على LINE",
+            copy: "نسخ LINE ID",
+            copied: "تم النسخ ✓",
+            scan: "أو امسح رمز QR",
+            online: "متعدد اللغات · متصل دائمًا",
+            badges: ["لغات متعددة", "مبني على اللوائح والإعلانات", "روابط رسمية"],
+            lnote: "هذه بعض اللغات فقط. اسأل بأي لغة أخرى وسيحاول UniBridge الرد بنفس اللغة.",
+            hf: "ماذا يمكن أن تسأل",
+            ft: ["بطاقة الإقامة وتصريح العمل", "الإجازات والدورات", "المنح والعمل بدوام جزئي", "حساب البنك والتحويل", "السكن والحياة اليومية", "الإعلانات والخريطة"],
+            fd: ["تمديد بطاقة الإقامة، تصريح العمل، والمستندات اللازمة.", "خطوات طلب الإجازة عبر الإنترنت، جدول الدورات، والنصائح.", "إعلانات المنح والتقديم داخل الجامعة.", "خطوات فتح الحساب واستلام الأموال.", "السكن، الحياة اليومية، والتأقلم في تايوان.", "آخر الإعلانات والخريطة."],
+            hh: "ابدأ في 3 خطوات",
+            st: [["أضف البوت", "امسح QR أو اضغط الزر."], ["اسأل سؤالاً", "اكتب بلغتك."], ["احصل على الخطوات والروابط", "سيرسل لك البوت تعليمات وروابط رسمية."]],
+            hd: "جرّب (illustration)",
+            demo: [["كيف تمدد بطاقة الإقامة؟", "عادة تحتاج إلى جواز السفر، البطاقة، إثبات الالتحاق، واستمارة الطلب."], ["كيف أطلب إجازة عبر الإنترنت؟", "تسجيل الدخول إلى نظام المدرسة، ملء النموذج، إرفاق المستندات، ثم انتظار الموافقة."], ["هل توجد إعلانات جديدة للمنح؟", "يُلخص UniBridge العنوان والتاريخ ورابط التقديم."]],
+            hq: "الأسئلة الشائعة",
+            q: [["هل يجب أن أطلب باللغة الصينية؟", "لا. يمكنك السؤال بعدة لغات وسيحاول UniBridge الرد بنفس اللغة."], ["هل يمكن الوثوق بالإجابات؟", "الإجابات هي معلومات مرجعية من الذكاء الاصطناعي، ويجب التأكد من الموقع الرسمي للجامعة."], ["كيف أرى خريطة الحرم؟", "اكتب “map” في المحادثة."], ["ماذا لو لم أجد إجابة؟", "حاول كلمات بحث أخرى أو تواصل مع القسم المعني."]],
+            hm: "خريطة الحرم",
+            md: "انقر على الصورة للاطلاع على الخريطة كاملة.",
+            mb: "فتح الخريطة كاملة",
+            note: "الإجابات من إنتاج الذكاء الاصطناعي للاستئناس فقط. راجع الموقع الرسمي للجامعة للتعرف على أحكامها الحالية.",
+            school: "موقع Wenzao"
+          }
         };
-        $("badges").replaceChildren(
-          ...t.badges.map((b) => el("li", "badge", b)),
-        );
-        const ids = ["#features", "#how", "#faq", "#map"];
-        $("nav").replaceChildren(
-          ...t.nav.map((n, i) => {
-            const a = el("a", "", n);
-            a.href = ids[i];
-            return a;
-          }),
-        );
-        $("feats").replaceChildren(
-          ...t.ft.map((x, i) => {
-            const c = el("div", "f");
-            const d = el("div");
-            d.append(el("h3", "", x), el("p", "", t.fd[i]));
-            c.append(el("span", "ic", ICONS[i]), d);
-            return c;
-          }),
-        );
-        $("steps").replaceChildren(
-          ...t.st.map((s, i) => {
-            const c = el("div", "step");
-            c.append(
-              el("div", "n", i + 1),
-              el("h3", "", s[0]),
-              el("p", "", s[1]),
-            );
-            return c;
-          }),
-        );
-        $("faqs").replaceChildren(
-          ...t.q.map((q) => {
-            const d = el("details");
-            d.append(el("summary", "", q[0]), el("p", "", q[1]));
-            return d;
-          }),
-        );
-        $("tabs").replaceChildren(
-          ...t.demo.map((d, i) => {
-            const b = el("button", "tab", d[0]);
-            b.onclick = () => showDemo(t, i);
-            return b;
-          }),
-        );
-        showDemo(t, demoIdx);
-        $("mapimg").href = MAP_URL;
-        $("mapthumb").src = MAP_URL;
-        $("mb").href = MAP_URL;
-      }
-      // language marquee (duplicated for seamless loop)
-      const chips = CHAT_LANGS.map((l) => el("span", "", l));
-      $("track").replaceChildren(
-        ...chips,
-        ...chips.map((c) => c.cloneNode(true)),
-        el("span", "", "+ more"),
-      );
 
-      const sel = $("lang");
-      const saved = (() => {
-        try {
-          return localStorage.getItem("ub-lang");
-        } catch (e) {
-          return null;
+        const safeStorage = {
+          get(key, fallback) {
+            try {
+              const value = localStorage.getItem(key);
+              if (value === null) return fallback;
+              return JSON.parse(value);
+            } catch (error) {
+              return fallback;
+            }
+          },
+          set(key, value) {
+            try {
+              localStorage.setItem(key, JSON.stringify(value));
+            } catch (error) {
+              // ignore storage errors
+            }
+          }
+        };
+
+        const state = {
+          lang: "zh",
+          demoIndex: 0,
+          helloIndex: 0,
+          demoTimer: null,
+          helloTimer: null,
+          revealObserver: null
+        };
+
+        function $(id) {
+          return document.getElementById(id);
         }
-      })();
-      const nav2 = (navigator.language || "zh").toLowerCase();
-      const guess = T[nav2]
-        ? nav2
-        : T[nav2.slice(0, 2)]
-          ? nav2.slice(0, 2)
-          : nav2.startsWith("tl")
-            ? "fil"
-            : "zh";
-      sel.value = T[saved] ? saved : guess;
-      sel.onchange = () => {
-        try {
-          localStorage.setItem("ub-lang", sel.value);
-        } catch (e) {}
-        render(sel.value);
-      };
-      $("theme").onclick = () => {
-        const r = document.documentElement,
-          dark = r.dataset.theme
-            ? r.dataset.theme === "dark"
-            : matchMedia("(prefers-color-scheme:dark)").matches;
-        r.dataset.theme = dark ? "light" : "dark";
-      };
-      render(sel.value);
-      hello();
 
-      const io = new IntersectionObserver(
-        (es) =>
-          es.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("in");
-              io.unobserve(e.target);
+        function el(tag, className, text) {
+          const node = document.createElement(tag);
+          if (className) node.className = className;
+          if (text !== undefined && text !== null) node.textContent = text;
+          return node;
+        }
+
+        function getLocaleCode() {
+          const language = (navigator.language || "zh").toLowerCase();
+          if (T[language]) return language;
+          const short = language.split("-")[0];
+          if (T[short]) return short;
+          if (language.startsWith("tl")) return "fil";
+          return "zh";
+        }
+
+        function applyTheme(theme) {
+          const root = document.documentElement;
+          if (theme === "dark") {
+            root.setAttribute("data-theme", "dark");
+          } else if (theme === "light") {
+            root.setAttribute("data-theme", "light");
+          } else {
+            root.removeAttribute("data-theme");
+          }
+        }
+
+        function initTheme() {
+          const saved = safeStorage.get("ub-theme", null);
+          if (saved) {
+            applyTheme(saved);
+          } else {
+            const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            applyTheme(prefersDark ? "dark" : "light");
+          }
+
+          $("theme").addEventListener("click", () => {
+            const root = document.documentElement;
+            const current = root.getAttribute("data-theme");
+            const next = current === "dark" ? "light" : "dark";
+            applyTheme(next);
+            safeStorage.set("ub-theme", next);
+          });
+        }
+
+        function initLanguage() {
+          const select = $("lang");
+          const saved = safeStorage.get("ub-lang", getLocaleCode());
+          const language = T[saved] ? saved : getLocaleCode();
+
+          select.value = language;
+          state.lang = language;
+
+          select.addEventListener("change", () => {
+            state.lang = select.value;
+            safeStorage.set("ub-lang", state.lang);
+            render();
+          });
+        }
+
+        function shareTextOrCopy() {
+          const payload = {
+            title: "UniBridge",
+            text: document.title,
+            url: location.href.startsWith("http") ? location.href : ADD_URL
+          };
+
+          if (navigator.share) {
+            navigator.share(payload).catch(() => {});
+            return;
+          }
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(payload.url).catch(() => {});
+          }
+        }
+
+        function initCopyButton() {
+          const copyBtn = $("copy");
+          copyBtn.addEventListener("click", async () => {
+            const original = T[state.lang].copy;
+            try {
+              if (navigator.clipboard && navigator.clipboard.writeText) {
+                await navigator.clipboard.writeText(LINE_ID);
+              }
+            } catch (error) {
+              // no-op fallback
             }
-          }),
-        { threshold: 0.12 },
-      );
-      document.querySelectorAll(".rv").forEach((n) => io.observe(n));
-      // highlight current section in nav
-      const secs = ["features", "how", "faq", "map"].map((i) => $(i));
-      const so = new IntersectionObserver(
-        (es) =>
-          es.forEach((e) => {
-            if (e.isIntersecting) {
-              const i = secs.indexOf(e.target);
-              [...$("nav").children].forEach((a, k) =>
-                a.classList.toggle("on", k === i),
-              );
-            }
-          }),
-        { rootMargin: "-40% 0px -55% 0px" },
-      );
-      secs.forEach((s) => so.observe(s));
+            copyBtn.textContent = T[state.lang].copied;
+            setTimeout(() => {
+              copyBtn.textContent = original;
+            }, 1800);
+          });
+        }
+
+        function renderHeader() {
+          const item = T[state.lang];
+          const nav = $("nav");
+          nav.innerHTML = "";
+          ["#features", "#how", "#faq", "#map"].forEach((href, index) => {
+            const a = document.createElement("a");
+            a.href = href;
+            a.textContent = item.nav[index];
+            if (index === 0) a.classList.add("on");
+            nav.appendChild(a);
+          });
+        }
+
+        function renderHero() {
+          const item = T[state.lang];
+          $("tag").innerHTML = item.tag;
+          $("sub").textContent = item.sub;
+          $("cta").textContent = item.cta;
+          $("cta").href = ADD_URL;
+          $("copy").textContent = item.copy;
+          $("scan").textContent = item.scan;
+          $("online").textContent = item.online;
+          $("lnote").textContent = item.lnote;
+          $("note").textContent = item.note;
+          $("school").textContent = item.school;
+          $("school").href = "https://www.wzu.edu.tw/";
+          $("mapimg").href = MAP_URL;
+          $("mapthumb").src = MAP_URL;
+          $("mb").textContent = item.mb;
+          $("mb").href = MAP_URL;
+
+          const badges = $("badges");
+          badges.innerHTML = "";
+          item.badges.forEach((badge) => {
+            const li = el("li", "badge", badge);
+            badges.appendChild(li);
+          });
+        }
+
+        function renderFeatures() {
+          const item = T[state.lang];
+          $("hf").textContent = item.hf;
+          const container = $("feats");
+          container.innerHTML = "";
+          item.ft.forEach((title, index) => {
+            const row = el("div", "f");
+            const icon = el("span", "ic", ICONS[index]);
+            const body = el("div");
+            const h3 = el("h3", "", title);
+            const p = el("p", "", item.fd[index]);
+            body.appendChild(h3);
+            body.appendChild(p);
+            row.appendChild(icon);
+            row.appendChild(body);
+            container.appendChild(row);
+          });
+
+          $("hh").textContent = item.hh;
+          const steps = $("steps");
+          steps.innerHTML = "";
+          item.st.forEach(([title, text], index) => {
+            const step = el("div", "step");
+            const n = el("div", "n", String(index + 1));
+            const h3 = el("h3", "", title);
+            const p = el("p", "", text);
+            step.appendChild(n);
+            step.appendChild(h3);
+            step.appendChild(p);
+            steps.appendChild(step);
+          });
+        }
+
+        function renderDemo() {
+          const item = T[state.lang];
+          $("hd").textContent = item.hd;
+          const tabs = $("tabs");
+          const phone = $("phone");
+          tabs.innerHTML = "";
+
+          item.demo.forEach(([title, body], index) => {
+            const btn = el("button", "tab" + (index === state.demoIndex ? " on" : ""), title);
+            btn.type = "button";
+            btn.addEventListener("click", () => {
+              state.demoIndex = index;
+              renderDemo();
+            });
+            tabs.appendChild(btn);
+          });
+
+          const data = item.demo[state.demoIndex];
+          phone.innerHTML = "";
+          const me = el("div", "msg me", data[0]);
+          const bot = el("div", "msg bot", data[1]);
+          phone.appendChild(me);
+          setTimeout(() => phone.appendChild(bot), 450);
+        }
+
+        function renderFaq() {
+          const item = T[state.lang];
+          $("hq").textContent = item.hq;
+          const faq = $("faqs");
+          faq.innerHTML = "";
+          item.q.forEach(([question, answer]) => {
+            const details = document.createElement("details");
+            const summary = el("summary", "", question);
+            const p = el("p", "", answer);
+            details.appendChild(summary);
+            details.appendChild(p);
+            faq.appendChild(details);
+          });
+        }
+
+        function renderMap() {
+          const item = T[state.lang];
+          $("hm").textContent = item.hm;
+          $("md").textContent = item.md;
+          $("mapimg").href = MAP_URL;
+          $("mapthumb").src = MAP_URL;
+          $("mb").textContent = item.mb;
+          $("mb").href = MAP_URL;
+        }
+
+        function renderLanguageTrack() {
+          const track = $("track");
+          const langs = CHAT_LANGS.slice();
+          const clone = langs.slice();
+          track.innerHTML = "";
+          [...langs, ...clone].forEach((lang) => {
+            const span = el("span", "", lang);
+            track.appendChild(span);
+          });
+        }
+
+        function render() {
+          const item = T[state.lang];
+          document.documentElement.lang = item.lang;
+          document.documentElement.dir = item.dir || "ltr";
+          document.title = "UniBridge｜" + (state.lang === "zh" ? "文藻國際學生 AI 小幫手" : "Wenzao AI Helper");
+
+          renderHeader();
+          renderHero();
+          renderFeatures();
+          renderDemo();
+          renderFaq();
+          renderMap();
+          renderLanguageTrack();
+        }
+
+        function initHelloLoop() {
+          const chat = $("hchat");
+          if (!chat) return;
+
+          const tick = () => {
+            const pair = HELLO[state.helloIndex % HELLO.length];
+            chat.innerHTML = "";
+
+            const me = el("div", "msg me", pair[1]);
+            const small = el("small", "", pair[0]);
+            me.prepend(small);
+            chat.appendChild(me);
+
+            setTimeout(() => {
+              const bot = el("div", "msg bot", pair[2]);
+              chat.appendChild(bot);
+            }, 700);
+
+            state.helloIndex += 1;
+            state.helloTimer = setTimeout(tick, 2600);
+          };
+
+          tick();
+        }
+
+        function initRevealObserver() {
+          const nodes = document.querySelectorAll(".rv");
+          if (!nodes.length) return;
+          const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in");
+                obs.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12 });
+
+          nodes.forEach((node) => observer.observe(node));
+        }
+
+        function initScrollProgress() {
+          const progress = document.createElement("div");
+          progress.id = "progress-bar";
+          Object.assign(progress.style, {
+            position: "fixed",
+            inset: "0 0 auto 0",
+            height: "3px",
+            background: "var(--line)",
+            transformOrigin: "0 50%",
+            transform: "scaleX(0)",
+            zIndex: "30"
+          });
+          document.body.appendChild(progress);
+
+          window.addEventListener("scroll", () => {
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const ratio = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+            progress.style.transform = "scaleX(" + ratio + ")";
+          }, { passive: true });
+        }
+
+        function init() {
+          initTheme();
+          initLanguage();
+          initCopyButton();
+          render();
+          initHelloLoop();
+          initRevealObserver();
+          initScrollProgress();
+        }
+
+        window.addEventListener("DOMContentLoaded", init);
+      })();
     </script>
   </body>
 </html>
